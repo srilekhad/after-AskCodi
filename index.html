@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Rental Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    h1 {
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+    }
+    input, select {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    button {
+        padding: 8px 15px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>House Rental Website</h1>
+</header>
+<div class="container">
+    <form id="rentalForm">
+        <label for="address">Address:</label>
+        <input type="text" id="address" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+        
+        <fieldset>
+            <legend>Payment Method:</legend>
+            <input type="radio" name="payment" id="credit" value="credit">
+            <label for="credit">Credit Card</label>
+            <input type="radio" name="payment" id="paypal" value="paypal">
+            <label for="paypal">PayPal</label>
+        </fieldset>
+        
+        <label for="terms">Agree to terms:</label>
+        <input type="checkbox" id="terms" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<footer>
+    <p>123 Main St, City, State, Postal Code</p>
+    <p>Email: rentals@example.com | Phone: 123-456-7890</p>
+</footer>
+<script>
+    document.getElementById('rentalForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        // Form validation can be done here
+        alert('Form submitted successfully!');
+    });
+</script>
+</body>
+</html>
